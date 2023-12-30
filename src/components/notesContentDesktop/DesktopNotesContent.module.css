@@ -1,0 +1,44 @@
+.notifications-container {
+    width: 400px;
+    height: auto;
+    font-size: 12px;
+    line-height: 1rem;
+    /*margin: 5px;*/
+}
+
+.flex {
+    display: flex;
+    text-align: justify;
+  }
+  
+.success {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    
+  }
+ 
+.success-prompt-wrap {
+    margin-left: 0.75rem;
+   
+}
+  
+.success-prompt-prompt { 
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5px; /* 28.834px */
+    letter-spacing: 0.63px;
+    
+}
+.success_button_container{
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 12px;
+    color:rgb(58, 58, 58);
+    justify-content: flex-end;
+    position: relative;
+    top: 20px;
+}

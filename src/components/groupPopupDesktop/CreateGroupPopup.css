@@ -1,0 +1,106 @@
+.popup{
+    height: 15rem;
+    width: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    background: white;
+    border-radius: 0.2rem;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+.popup_title{
+    font-size: 3.2vh;
+    margin: 0 1vh 1vh 1vh 1vh;
+    height: 1rem;
+    width: 23rem;
+    text-align: center;
+    font-weight: 600;
+}
+.popup_input{
+    font-size: 1rem ;
+    font-weight: 600;
+    height: 2rem;
+    width: 25rem;
+    display: flex;
+    gap:2vw;
+    align-items: center;
+    margin: 2vh 1vh 1vh 1vh;
+}
+
+.popup_input > input{
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 2vh;
+    width: 15vw;
+    border: 2px solid gray;
+    border-radius: 6vh;
+}
+.popup_color_input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    gap:3vw;
+    margin: 2vh 1vh 1vh 1vh;
+}
+.color_input_color{
+    display: flex;
+    gap: 0.8vw;
+}
+
+.color_input_color_1,
+.color_input_color_2,
+.color_input_color_3,
+.color_input_color_4,
+.color_input_color_5,
+.color_input_color_6{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: black;
+}
+
+.color_input_color_1{
+     background-color:  rgb(179, 139, 250);}
+.color_input_color_2{ 
+    background-color:  rgb(255, 121, 242);}
+.color_input_color_3{
+     background-color:  rgb(67, 230, 252);}
+.color_input_color_4{
+     background-color:  rgb(241, 149, 118);}
+.color_input_color_5{ 
+    background-color:  rgb(0, 71, 255);}
+.color_input_color_6{
+     background-color:  rgb(102, 145, 255);}
+
+.highlight{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6vh;
+}
+.popup_close {
+    height: 2rem;
+    width: 23rem;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1vh 1vh 1vh 1vh;
+  }
+  
+  .popup_close > button {
+    margin-top: 1rem;
+    height: 5vh;
+    width: 8vw;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 1vh;
+    background-color: rgb(46, 60, 252);
+  }

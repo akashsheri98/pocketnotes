@@ -1,0 +1,58 @@
+.desktop_sidebar{
+    width: 24vw;
+    height: 96vh;
+   
+}
+.desktop_sidebar_heading{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.desktop_sidebar_create_button{
+   
+    position: fixed;
+    top:85vh;
+    left:17vw;
+    z-index: 5;
+   
+}
+
+.desktop_sidebar_create_button > button{
+    background-color: #16008B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.desktop_grouppopup{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Make sure this is above the modal */
+}
+.desktop_sidebar_notes_title{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  max-height: 79vh;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; 
+}
+
+::-webkit-scrollbar{
+    display:none;
+
+}
+#add{
+    font-size: 30px;
+}

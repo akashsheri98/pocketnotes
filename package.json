@@ -1,12 +1,12 @@
 {
-  "homepage": "https://akashsheri98.github.io/pocketnotes",
+  "homepage": "hhtps://akashSheri98.github.io/pocketnotes",
   "name": "pocketnotes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
