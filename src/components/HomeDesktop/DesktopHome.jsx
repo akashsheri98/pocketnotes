@@ -13,7 +13,7 @@ const DesktopHome = ()=>{
                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone</p>
             <div className={styles.desktop_home_button}>
                 <img src={lock} alt="lock" />
-                <span>end-to-end encrypted</span>
+                <span>end-to-end encrypted</span><br></br>
                 <span>&copy; akash_s_s</span>
             </div>
         </div>
