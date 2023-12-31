@@ -14,6 +14,7 @@ const DesktopHome = ()=>{
             <div className={styles.desktop_home_button}>
                 <img src={lock} alt="lock" />
                 <span>end-to-end encrypted</span>
+                <span>&copy; akash_s_s</span>
             </div>
         </div>
     );

@@ -48,7 +48,9 @@ const SidebarDesktop = () => {
             <div className={styles.desktop_sidebar_notes_title}>
                 {title.length > 0 ? (title.map((titles, index) => <NotesTitle key={index} title={titles} />)) :
                     (
-                        <div className={styles.desktop_sidebar_notes_title}><p>No Notes group created</p></div>
+                        <div className={styles.desktop_sidebar_notes_title}><p>No Notes group created</p>
+                        <h6>to create notes group click button</h6>
+                        </div>
                     )}
 
             </div>
