@@ -1,0 +1,28 @@
+.mobile_notes{
+    height: 10vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 0 2vh 6vh;
+}
+
+.mobile_notes_icon{
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+    font-weight: 600;
+   
+}
+
+.mobile_notes_title{
+    width: 50vw;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}

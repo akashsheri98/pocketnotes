@@ -1,0 +1,136 @@
+.mobile_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 15rem;
+    width: 20rem;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    z-index: 9999;
+  }
+
+  .mobile_popup_title {
+    text-align: center;
+    height: 5vh;
+    width: 90vw;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 3vw;
+    color: rgb(37, 37, 37);
+  }
+  
+  .mobile_popup_input {
+    font-size: smaller ;
+    height: 2rem;
+    width: 25rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    align-items: center;
+    margin: 2vh 1vh 1vh 1vh;
+    color: rgb(37, 37, 37);
+  }
+  .mobile_popup_color_input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    gap:3vw;
+    margin: 2vh 1vh 1vh 1vh;
+    
+  }
+  
+  .mobile_popup_input > input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 2vh;
+    width: 45vw;
+    border: 2px solid gray;
+    border-radius: 6vh;
+    background-color: white;
+    color: black;
+  }
+  
+  
+  .mobile_popup_color_input > span{
+      font-size: smaller;
+      font-weight: 500;
+      color: rgb(37, 37, 37);
+  }
+  
+  .mobile_color_input_color{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2vw;
+  }
+  
+  .mobile_color_input_color_1,
+  .mobile_color_input_color_2,
+  .mobile_color_input_color_3,
+  .mobile_color_input_color_4,
+  .mobile_color_input_color_5,
+  .mobile_color_input_color_6 {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+  }
+  
+  .mobile_color_input_color_1{
+      background-color: #B38BFA;
+  }
+  
+  .mobile_color_input_color_2{
+      background-color: #FF79F2;
+  }
+  
+  .mobile_color_input_color_3{
+      background-color: #43E6FC;
+  }
+  
+  .mobile_color_input_color_4{
+      background-color: #F19576;
+  }
+  
+  .mobile_color_input_color_5{
+      background-color: #0047FF;
+  }
+  
+  .mobile_color_input_color_6{
+      background-color: #6691FF;
+  }
+  
+  .mobile_popup_close {
+    height: 1rem;
+  
+    display: flex;
+    justify-content: flex-end;
+    margin: 1vh 1vh 1vh 1vh;
+  }
+  
+  .mobile_popup_close > button {
+    margin-top: 0.5rem;
+    height: 5vh;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 1vh;
+    background-color: rgb(46, 60, 252);
+   
+  }
+  
+  .highlight{
+      border: 2px solid black;
+      border-radius: 6vh;
+  }

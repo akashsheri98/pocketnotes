@@ -1,18 +1,19 @@
-/* eslint-disable no-unused-vars */
-import React , {useEffect , useState} from 'react';
-import styles from "../../components/notesDesktop/DesktopNotesComponent.module.css";
+
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import enter from "../../assets/enter.png";
-import DesktopNotesContent from "../../components/notesContentDesktop/DesktopNotesContent";
-import usePocketContext from '../../hooks/usePocketContext';
+import back from "../../assets/back.png";
+import MobileNotesContent from "../../components/notesContentMobile/MobileNotesContent";
+import usePocketContext from "../../hooks/usePocketContext";
+import styles from "../../components/mobilePage/NotesMobilePages.module.css";
 
-
-const DesktopNotesComponent = () =>{
+const NotesMobilePages = ()=>{
     const [text , setText] =useState("");
     const [bgColor ,setBgColor] = useState("#fff");
     const [initials , setInitials] = useState("");
     const [selectedTitle , setSelectedTitle] = useState("");
-    const { notes ,setNotes ,selected } = usePocketContext();
-
+    const { notes, setNotes, selected, setSelected } = usePocketContext();
+    const navigate = useNavigate();
     useEffect(()=>{
         setNotes(JSON.parse(localStorage.getItem(selected)) || []);
         const groupNames = JSON.parse(localStorage.getItem("groupNames"));
@@ -68,24 +69,29 @@ const DesktopNotesComponent = () =>{
         setText(e.target.value);
     };
 
-    
-    return(
-        <div className={styles.desktop_notes}>
-            <div className={styles.desktop_notes_title}>
-                <div className={styles.desktop_notes_title_color} style={{backgroundColor:bgColor}}> 
+    const goBack = () => {
+        setSelected("");
+        navigate("/");
+      };
+
+      return(
+        <div className={styles.mobile_notes}>
+            <div className={styles.mobile_notes_title}>
+            <img src={back} alt="back" onClick={goBack} />
+                <div className={styles.mobile_notes_title_color} style={{backgroundColor:bgColor}}> 
                     {initials}
                 </div>
-                <div className={styles.desktop_notes_title_text}>{selectedTitle}</div>
+                <div className={styles.mobile_notes_title_text}>{selectedTitle}</div>
             </div>
-            <div className={styles.desktop_notes_content}>
+            <div className={styles.mobile_notes_content}>
                 {notes && notes.length > 0 ?
                     notes.map((note,index)=>(
-                        <DesktopNotesContent key={index} note={note}/>
+                        <MobileNotesContent key={index} note={note}/>
                     )) :
                     null
                 }
             </div>
-           <div className={styles.desktop_notes_input} /* style={{backgroundColor:bgColor}}*/>
+           <div className={styles.mobile_notes_input} /* style={{backgroundColor:bgColor}}*/>
                 <textarea
                     value={text}
                     placeholder='ENTER YOUR NOTES HERE'
@@ -99,4 +105,4 @@ const DesktopNotesComponent = () =>{
     );
 };
 
-export default DesktopNotesComponent;
+export default NotesMobilePages;

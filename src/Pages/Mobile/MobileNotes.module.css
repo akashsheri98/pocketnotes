@@ -1,0 +1,75 @@
+.mobile_sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.mobile_sidebar_title {
+  text-align: center;
+  height: 8vh;
+  width: 80vw;
+  font-size: 2rem;
+  font-weight: 700;
+  position: fixed;
+  top: 3vh;
+  
+}
+
+.mobile_sidebar_create_notes_btn {
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 12vh;
+  background-color: white;
+}
+
+.mobile_sidebar_create_button{
+   
+  position: fixed;
+  top:78vh;
+  right:15vw;
+  z-index: 5;
+ 
+}
+.mobile_sidebar_create_button > button {
+    background-color: #16008B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.mobile_sidebar_notes_title {
+  min-height: 74vh;
+  margin-top: 1vh;
+  overflow-y: auto;
+
+  height: 50vh;
+  width: 100vw;
+}
+
+.mobile_popup_overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+#add{
+    font-size: 30px;
+}
