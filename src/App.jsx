@@ -28,14 +28,16 @@ function App() {
       <Provider>
         <div className="App">
         {screenSize > 500 ? (<DesktopNotes/>):(
-
-            <Router>
-            <Routes>
-              <Route path='/' element={<MobileNotes/>}/>
-              <Route path='/notes' element={<NotesMobilePages/>}/>
-            </Routes>
-            </Router>
-        )}
+           <Router>
+           <Routes>
+             <Route path='/' element={<MobileNotes/>}/>
+             <Route path='/notes' element={<NotesMobilePages/>}/>
+           </Routes>
+           </Router>
+        )
+          
+           
+        }
         </div>
         
       </Provider>

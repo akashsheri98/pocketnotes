@@ -2,7 +2,7 @@ import { useState, useEffect ,useRef } from "react";
 import PopupMobile from "../../components/groupPopupMobile/PopupMobile";
 import MobileNotesComponent from "../../components/notesMobile/MobileNotesComponent";
 import styles from "../Mobile/MobileNotes.module.css";
-import MobileHome from "../../components/homeMobile/MobileHome";
+//import MobileHome from "../../components/homeMobile/MobileHome";
 const MobileNotes = ()=>{
     const [title, setTitle] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
@@ -61,7 +61,9 @@ const MobileNotes = ()=>{
             <div className={styles.mobile_sidebar_notes_title}>
                 {title.length > 0 ? (title.map((titles, index) => <MobileNotesComponent key={index} title={titles} />)) :
                     (    
-                        <MobileHome/>
+                        <div className={styles.desktop_sidebar_notes_title}><p>No Notes group created</p>
+                        <h5>to create notes group click button</h5>
+                        </div>
                     )}
 
             </div>
