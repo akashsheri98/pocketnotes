@@ -16,10 +16,13 @@ const PopupMobile= ({groupParentName , setGroupParentName, onClose})=>{
     };
 
     const saveName = () => {
-        const newGroup = { name: groupName, color: bgColor };
-        setGroupParentName([...groupParentName , newGroup]);
-        localStorage.setItem("groupNames" , JSON.stringify([...groupParentName , newGroup]));
-        onClose();
+        
+         const newGroup = { name: groupName, color: bgColor };
+        if(newGroup.name != 0 && newGroup.color != 0){
+            setGroupParentName([...groupParentName , newGroup]);
+            localStorage.setItem("groupNames" , JSON.stringify([...groupParentName , newGroup]));
+            onClose();
+        }
       };
 
     return(

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState } from "react";
+import { useState} from "react";
 import  "./CreateGroupPopup.css";
 
 const CreateGroupPopup = ({groupParentName , setGroupParentName, onClose})=>{
@@ -20,10 +20,13 @@ const CreateGroupPopup = ({groupParentName , setGroupParentName, onClose})=>{
 
     const saveName=()=>{
         const newGroup = { name:groupName , color:bgColor};
-        setGroupParentName([...groupParentName , newGroup]);
-        localStorage.setItem("groupNames" , JSON.stringify([...groupParentName , newGroup]));
-        onClose();
+        if(newGroup.name != 0 && newGroup.color != 0){
+            setGroupParentName([...groupParentName , newGroup]);
+            localStorage.setItem("groupNames" , JSON.stringify([...groupParentName , newGroup]));
+            onClose();
+        }
     };
+   
     return(
         <div className="popup">
             <div className="popup_title">Create New Group</div>
@@ -72,7 +75,7 @@ const CreateGroupPopup = ({groupParentName , setGroupParentName, onClose})=>{
                 </div>
             </div>
             <div className="popup_close">
-                <button onClick={saveName} disabled={groupName.length === 0}>
+                <button onClick={saveName} disabled={groupName.length ===0}>
                 Create
                 </button>
             </div>
