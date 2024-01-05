@@ -18,19 +18,7 @@ const MobileNotes = ()=>{
         }
     }, []);
 
-    const modRef =useRef(null);
-    useEffect(()=>{ 
-        let handler;
-        handler =(event)=>{
-            if(!modRef.current?.contains(event.target)){
-                setShowPopup(false);
-            }
-            else{
-                setShowPopup(true);
-            }
-        }
-        document.addEventListener("mousedown",handler);
-    },[]);
+    
     /*useEffect(()=>{
         const obj = JSON.parse(localStorage.getItem("groupNames") );
         const result = Object.keys(obj).map((key)=> [obj[key]]);
@@ -46,6 +34,19 @@ const MobileNotes = ()=>{
         }
     }, [groupParentName]);
 
+    const modRef =useRef(null);
+    useEffect(()=>{ 
+        let handler;
+        handler =(event)=>{
+            if(!modRef.current?.contains(event.target)){
+                setShowPopup(false);
+            }
+            else{
+                setShowPopup(true);
+            }
+        }
+        document.addEventListener("mousedown",handler);
+    },[]);
 
     const handleClick = () => {
         setShowPopup(true);
@@ -59,11 +60,8 @@ const MobileNotes = ()=>{
             <div className={styles.mobile_sidebar_title}>Pocket Notes</div>
             <div className={styles.mobile_sidebar_notes_title}>
                 {title.length > 0 ? (title.map((titles, index) => <MobileNotesComponent key={index} title={titles} />)) :
-                    (
-                        
+                    (    
                         <MobileHome/>
-                      
-                        
                     )}
 
             </div>
